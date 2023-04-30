@@ -59,7 +59,7 @@ spec:
         container('gcloud') {
           sh "pwd"
           sh "ls -lrt"
-          sh "PYTHONUNBUFFERED=1 gcloud builds submit -t ${IMAGE_TAG} ./go/src/sample-app/sample-app/Dockerfile"
+          sh "PYTHONUNBUFFERED=1 gcloud builds submit -t ${IMAGE_TAG} ./home/jenkins/agent/workspace/my-sample-app_canary/sample-app/Dockerfile"
         }
       }
     }
