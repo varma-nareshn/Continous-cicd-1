@@ -54,7 +54,7 @@ spec:
         }
       }
     }
-    stage('Build and push image with Container Builder') {
+    //stage('Build and push image with Container Builder') {
       steps {
         container('gcloud') {
           sh "pwd"
@@ -62,7 +62,7 @@ spec:
           sh "PYTHONUNBUFFERED=1 gcloud builds submit -t ${IMAGE_TAG} ./home/jenkins/agent/workspace/my-sample-app_canary/sample-app/Dockerfile"
         }
       }
-    }
+    }//
     stage('Deploy Canary') {
       // Canary branch
       when { branch 'canary' }
