@@ -58,7 +58,7 @@ spec:
       steps {
         container('gcloud') {
           sh "gcloud auth list"
-          sh "PYTHONUNBUFFERED=1 gcloud builds submit -t ${IMAGE_TAG} ./go/src/sample-app/sample-app/Dockerfile --no-source"
+          sh "PYTHONUNBUFFERED=1 gcloud builds submit --no-source -t ${IMAGE_TAG} ./go/src/sample-app/sample-app/Dockerfile"
         }
       }
     }
